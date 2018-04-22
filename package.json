@@ -1,0 +1,24 @@
+{
+  "name": "fullpage-example",
+  "description": "a project example using fullpage.js",
+  "version": "1.0.0",
+  "license": "LGPL-3.0",
+  "scripts": {
+    "build-css": "postcss src/main.scss --verbose -u postcss-nested -u postcss-advanced-variables -u postcss-object-fit-images -u autoprefixer --output css/main.css",
+    "build-js": "babel src/main.js --out-file js/main.js",
+    "build": "npm run build-css && npm run build-js",
+    "dev-css": "postcss src/main.scss --verbose -u postcss-nested -u postcss-advanced-variables -u postcss-object-fit-images -u autoprefixer --output css/main.css --watch",
+    "dev-js": "babel src/main.js --watch --out-file js/main.js",
+    "dev": "concurrently -k \"npm run dev-css\" \"npm run dev-js\""
+  },
+  "devDependencies": {
+    "autoprefixer": "^8.3.0",
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "concurrently": "^3.5.1",
+    "postcss-advanced-variables": "^2.3.3",
+    "postcss-cli": "^5.0.0",
+    "postcss-nested": "^3.0.0",
+    "postcss-object-fit-images": "^1.1.2"
+  }
+}

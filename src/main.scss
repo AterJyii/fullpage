@@ -1,0 +1,348 @@
+/*
+  This files is compiled by post-css instead of real scss compiler.
+  It only support the features covered by post-css plugins such as variables and nessting.
+*/
+$first-section-delay-time: 3s;
+$caption-font-size: 18px;
+$button-font-size: 20px;
+$main-title-font-size: 80px;
+$weight-bold: 700;
+$weight-light: 200;
+
+#black-card {
+  background-color: black;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+}
+
+/* 動畫 */
+
+@keyframes bg-fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes zoom-out {
+  from {
+    transform: scale(1.4);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes zoom-in {
+  from {
+    opacity: 0;
+    transform: scale(1.4);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* 一般設定 */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "source-han-sans-traditional", Arial, Helvetica, "儷黑 Pro", "微軟正黑體", sans-serif;
+  overflow: hidden !important;
+}
+
+.fullpage-section {
+  overflow: hidden;
+}
+
+p {
+  margin-bottom: .5em;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+/* 背景圖片 */
+
+.background-image {
+  user-select: none;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* opening */
+.fullpage-section.opening {
+  .background-image {
+    animation: zoom-in 1.5s ease $first-section-delay-time both;
+  }
+}
+
+h1.main-title {
+  font-size: $main-title-font-size;
+  font-weight: $weight-bold;
+  color: white;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+  width: 85%;
+  max-width: 8em;
+  line-height: 1.1;
+  text-align: center;
+  position: relative;
+  margin: 0 auto;
+}
+
+.publish-date {
+  font-size: $caption-font-size;
+  font-weight: $weight-light;
+  color: white;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+  line-height: 1.1;
+  text-align: center;
+  position: relative;
+  margin: 0 auto;
+  margin-top: 3em;
+  width: 15em;
+}
+
+#arrow-down {
+  width: 45px;
+  position: absolute;
+  bottom: 40px;
+  left: calc(50% - 22.5px);
+}
+
+/* 嵌入 */
+
+.embedded-item {
+  width: 50%;
+  height: 50%;
+  margin: 0 auto;
+  iframe {
+    width: 100%;
+    height: 100%;
+  }
+  @media screen and (orientation: portrait) {
+    width: 95%;
+  }
+}
+
+/* 全螢幕影片 */
+
+.fullscreen-video {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  &::after {
+    content: " ";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 500;
+  }
+}
+
+/* caption */
+
+.bottom-left-caption {
+  font-weight: $weight-light;
+  color: black;
+  background-color: rgba(255, 255, 255, .7);
+  max-width: 500px;
+  position: absolute;
+  bottom: 40px;
+  left: 80px;
+  font-size: $caption-font-size;
+  padding: .8em 1.3em;
+  line-height: 1.4;
+  text-align: justify;
+  p {
+    margin-bottom: .5em;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.top-left-caption {
+  font-weight: $weight-light;
+  color: black;
+  background-color: rgba(255, 255, 255, .7);
+  max-width: 500px;
+  position: absolute;
+  top: 40px;
+  left: 80px;
+  font-size: $caption-font-size;
+  padding: .8em 1.3em;
+  line-height: 1.4;
+  text-align: justify;
+  p {
+    margin-bottom: .5em;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.bottom-right-caption {
+  font-weight: $weight-light;
+  color: black;
+  background-color: rgba(255, 255, 255, .7);
+  max-width: 500px;
+  position: absolute;
+  bottom: 40px;
+  right: 80px;
+  font-size: $caption-font-size;
+  padding: .8em 1.3em;
+  line-height: 1.4;
+  text-align: justify;
+  p {
+    margin-bottom: .5em;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.top-right-caption {
+  font-weight: $weight-light;
+  color: black;
+  background-color: rgba(255, 255, 255, .7);
+  max-width: 500px;
+  position: absolute;
+  top: 40px;
+  right: 80px;
+  font-size: $caption-font-size;
+  padding: .8em 1.3em;
+  line-height: 1.4;
+  text-align: justify;
+}
+
+/* 按鈕 */
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  .button {
+    margin-bottom: .7em;
+  }
+}
+
+.button {
+	background-color: rgba(240, 240, 240, 0.7);
+	border-color: #dbdbdb;
+  border-width: 1px;
+  border-radius: 4px;
+	color: #363636;
+	cursor: pointer;
+	justify-content: center;
+	padding-bottom: .6em;
+	padding-left: .9em;
+	padding-right: .9em;
+	padding-top: .6em;
+	text-align: center;
+  white-space: nowrap;
+  font-size: $button-font-size;
+  &:active {
+    background-color: rgba(210, 210, 210, 0.6);
+    color: black;
+  }
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.72);
+  }
+  &:link {
+    text-decoration: none;
+  }
+}
+
+/* 文字方塊 */
+
+.text-box {
+  font-size: $caption-font-size;
+  padding: 2.7em 3.8em;
+  background-color: rgba(255, 255, 255, .44);
+  color: #1d1d1d;
+  .text-box-title {
+    text-align: center;
+    font-size: 2em;
+    font-weight: $weight-bold;
+    margin-bottom: .8em;
+    line-height: 1.18;
+  }
+  .text-box-content {
+    text-align: justify;
+    font-size: 1.1em;
+    font-weight: $weight-light;
+    line-height: 1.25;
+  }
+  margin: 0 auto;
+  width: 70%;
+  max-width: 500px;
+  @media screen and (orientation: portrait) {
+    width: 95%;
+    max-width: 95%;
+  }
+}
+
+/* section content */
+
+.section-title {
+  color: white;
+  font-size: 2.2rem;
+  line-height: 1.15;
+  margin: 0 auto .6em auto;
+  text-align: center;
+  width: 70%;
+  max-width: 500px;
+  font-weight: $weight-bold;
+  @media screen and (orientation: portrait) {
+    width: 95%;
+    max-width: 95%;
+  }
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.6);
+}
+
+.section-description {
+  font-size: 1.2rem;
+  color: white;
+  margin: 0 auto 2em auto;
+  text-align: justify;
+  width: 70%;
+  max-width: 500px;
+  font-weight: $weight-light;
+  line-height: 1.25;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  @media screen and (orientation: portrait) {
+    width: 95%;
+    max-width: 95%;
+  }
+}
+
+.centering-container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}

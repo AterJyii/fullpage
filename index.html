@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+  <!-- 網頁標題（會顯示在瀏覽器上面）： -->
+  <title>Example Page</title>
+  <!-- 一些網頁基本設定： -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- 社群分享的顯示內容設定： -->
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="分享的標題" />
+  <meta property="og:description" content="分享的簡述" />
+  <meta property="og:image" content="圖片的網址" />
+  <!-- 引入外部 CSS Stylesheets 檔案： -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" integrity="sha256-gvEnj2axkqIj4wbYhPjbWV7zttgpzBVEgHub9AAZQD4="
+    crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.min.css" integrity="sha256-27KRQA6ck6EiKWEkCpHR2NcEeAYnqz8Q5a83PYHh1z0="
+    crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" integrity="sha256-j+P6EZJVrbXgwSR5Mx+eCS6FvP9Wq27MBRC/ogVriY0="
+    crossorigin="anonymous" />
+  <link rel="stylesheet" href="css/main.css" />
+  <!-- 自訂的 CSS 碼 -->
+  <style>
+    /* 可以在這裡面寫 CSS */
+    body {
+      background-color: black;
+    }
+  </style>
+  <!-- 引入外部 Javascript Modules 檔案： -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.min.js" integrity="sha256-SNaaqfQPa0XlEqQDrsurQ+Qq5XnhNrwHQXnZpdXlCEI="
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/object-fit-images/3.2.3/ofi.min.js" integrity="sha256-Em77zcSKnu9XoN6UkiSgupcc05HnWe8b15UgVxtzHeE="
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js" integrity="sha256-z6FznuNG1jo9PP3/jBjL6P3tvLMtSwiVAowZPOgo56U="
+    crossorigin="anonymous"></script>
+  <script src="js/main.js"></script>
+</head>
+
+<body>
+  <!-- BLACK CARD -->
+  <div id="black-card" class="wow fadeOut"></div>
+  <!-- 內容 -->
+  <div id="fullpage">
+    <!-- 標題頁： -->
+    <section class="fullpage-section opening">
+      <img class="background-image" src="images/cats-10.jpg" />
+      <h1 class="main-title wow fadeInUp" data-wow-delay="3s">測試大標測試大標測試大標</h1>
+      <div class="publish-date wow fadeIn" data-wow-delay="3.8s">2018.05.16</div>
+      <img id="arrow-down" class="wow fadeInUp" data-wow-delay="4.6s" src="images/arrow-down.svg" />
+    </section>
+    <!-- 背景圖片＋小標＋嵌入圖表（置中）： -->
+     <section class="fullpage-section">
+        <div class="centering-container">
+          <h2 class="section-title">測試小標測試小標測試小標測試小標測試小標測試小標</h2>
+          <div class="section-description">測試說明測試說明測試說明測試說明測試說明測試說明測試說明測試說明</div>
+          <div class="embedded-item">
+            <script src="https://infograph.venngage.com/js/embed/v1/embed.js" data-vg-id="nZ6aFeBNDR8" data-title="Half Pie Chart_new" data-w="640" data-h="400" data-multipage="true" data-f="false"></script>
+          </div>
+        </div>
+      </section>
+    <!-- 小標＋按鈕清單： -->
+    <section class="fullpage-section">
+      <h2 class="section-title">測試小標測試小標測試小標</h2>
+      <div class="section-description">測試說明測試說明測試說明測試說明測試說明測試說明測試說明測試說明</div>
+      <div class="buttons">
+        <a class="button" href="subject-01.html" target="_self">
+          連結一
+        </a>
+        <a class="button" onclick="customUtils.jumpTo(4)">
+          連結二
+        </a>
+      </div>
+    </section>
+    <!-- 置中文字方塊： -->
+    <section class="fullpage-section">
+      <div class="text-box">
+        <h3 class="text-box-title">測試小標測試小標測試小標</h3>
+        <div class="text-box-content">
+          <p>能業轉文連開加有……未十候林；<a href="subject-01.html">都我必光飛萬市成作美正內麼</a>；往個方格型母對狀管廣邊病們意國獨廣樣後不。</p>
+          <p>完見不笑亞正小不動夫不甚。評程還果四真民大念傳學麼接是在機開總石間上照面些上學你年電長。</p>
+        </div>
+      </div>
+    </section>
+    <!-- 置中小標： -->
+    <section class="fullpage-section">
+      <h3 class="section-title">測試小標測試小標測試小標</h3>
+    </section>
+    <!-- 背景圖片＋文字註解（右下）： -->
+    <section class="fullpage-section">
+      <img class="background-image" src="images/cats-10.jpg" />
+      <div class="bottom-right-caption wow fadeIn" data-wow-delay="500ms">
+        <p>能業轉文連開加有……未十候林；都我必光飛萬市成作美正內麼；他頭改業。雖路生氣斷神什色後；往個方格型母對狀管廣邊病們意國獨廣樣後不。</p>
+        <p>完見不笑亞正小不動夫不甚。簡際會這國、個象際研電的個？的業後育交家深：評程還果四真民大念傳學麼接是在機開總石間上照面些上學你年電長。</p>
+      </div>
+    </section>
+    <!-- 背景圖片＋文字註解（左下）： -->
+    <section class="fullpage-section">
+      <img class="background-image" src="images/cats-11.jpg" />
+      <div class="bottom-left-caption wow fadeInUp" data-wow-delay="500ms">
+        <p>能業轉文連開加有……未十候林；都我必光飛萬市成作美正內麼；他頭改業。雖路生氣斷神什色後；往個方格型母對狀管廣邊病們意國獨廣樣後不。</p>
+        <p>完見不笑亞正小不動夫不甚。簡際會這國、個象際研電的個？的業後育交家深：評程還果四真民大念傳學麼接是在機開總石間上照面些上學你年電長。</p>
+      </div>
+    </section>
+    <!-- 背景圖片＋文字註解（左上）： -->
+    <section class="fullpage-section">
+      <img class="background-image" src="images/tree-30.jpg" />
+      <div class="top-left-caption wow fadeInLeft" data-wow-delay="500ms">
+        <p>能業轉文連開加有……未十候林；都我必光飛萬市成作美正內麼；他頭改業。雖路生氣斷神什色後；往個方格型母對狀管廣邊病們意國獨廣樣後不。</p>
+        <p>完見不笑亞正小不動夫不甚。簡際會這國、個象際研電的個？的業後育交家深：評程還果四真民大念傳學麼接是在機開總石間上照面些上學你年電長。</p>
+      </div>
+    </section>
+    <!-- 背景圖片＋文字註解（右上） -->
+    <section class="fullpage-section">
+      <img class="background-image" src="images/cats-10.jpg" />
+      <div class="top-right-caption wow fadeInDown" data-wow-delay="500ms">
+        <p>能業轉文連開加有……未十候林；都我必光飛萬市成作美正內麼；他頭改業。雖路生氣斷神什色後；往個方格型母對狀管廣邊病們意國獨廣樣後不。</p>
+        <p>完見不笑亞正小不動夫不甚。簡際會這國、個象際研電的個？的業後育交家深：評程還果四真民大念傳學麼接是在機開總石間上照面些上學你年電長。</p>
+      </div>
+    </section>
+    <!-- 背景圖片＋小標＋嵌入影片（置中）： -->
+    <section class="fullpage-section">
+      <img class="background-image" src="images/tree-30.jpg" />
+      <div class="centering-container">
+        <h2 class="section-title">測試小標測試小標測試小標</h2>
+        <div class="section-description">測試說明測試說明測試說明測試說明測試說明測試說明測試說明測試說明</div>
+        <img class="background-image" src="images/tree-30.jpg" />
+        <div class="embedded-item">
+          <iframe width="100%" height="100%" src="https://www.youtube.com/embed/E6hIhWGyVnE?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0"
+            allow="autoplay; encrypted-media" allowfullscreen data data-autoplay></iframe>
+        </div>
+      </div>
+    </section>
+    <!-- 背景圖片＋小標＋嵌入地圖（置中） -->
+    <section class="fullpage-section">
+      <img class="background-image" src="images/cats-10.jpg" />
+      <div class="centering-container">
+        <h2 class="section-title">測試小標測試小標測試小標</h2>
+        <div class="section-description">測試說明測試說明測試說明測試說明測試說明測試說明測試說明測試說明</div>
+        <div class="embedded-item">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14614.414157716212!2d120.30566323623675!3d23.69013200345274!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346ea51c2171b22d%3A0xe2d9fd0d8fa15b76!2zNjU16Zuy5p6X57ij5YWD6ZW36YSJ5rqq5bqV!5e0!3m2!1szh-TW!2stw!4v1525787124510"
+            width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
+        </div>
+      </div>
+    </section>
+    <!-- 嵌入影片（全版）：-->
+    <section class="fullpage-section">
+      <div class="fullscreen-video">
+        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/E6hIhWGyVnE?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0"
+          allow="autoplay; encrypted-media" allowfullscreen data data-autoplay></iframe>
+      </div>
+    </section>
+    <!-- 背景圖片： -->
+    <section class="fullpage-section">
+      <img class="background-image" src="images/tree-30.jpg" />
+    </section>
+    <!-- 製作團隊： -->
+    <section class="fullpage-section">
+      <h2 class="section-title">製作團隊</h2>
+      <div class="section-description" style="text-align: center;">
+        <p>陳昶平</p>
+        <p>林佑娟</p>
+        <p>鄧佳欣</p>
+        <p>陳世恩</p>
+      </div>
+    </section>
+  </div>
+  <!-- Adobe Typekit 嵌入碼 （請把下面網址中的 `jfh4ekx` 換成你自己的 kit ID： https://typekit.com/account/kits ）-->
+  <script src="https://use.typekit.net/jfh4ekx.js"></script>
+  <script>
+    try {
+      Typekit.load({
+        async: true
+      });
+    } catch (e) {}
+  </script>
+</body>
+
+</html>
